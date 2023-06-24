@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/css/home.css">
+<center>
+    <div class="card mt-4" style="width: 25rem;">
+        <div class="card-header">
+            <h2>File's List</h2>
+        </div>
+        <ul class="list-group list-group-flush" id="fileList" style="list-style: none;">
+            <% for (item of files) { %>
+                <li>
+                    <span class="filename">
+                        <%= item.filename %>
+                    </span>
+                    <a href="/view/<%= item.filename %>" title="View CSV File"><i class="fa-solid fa-eye"></i></a>
+                    <a href="/delete/<%= item.id %>" title="Delete"><i class="fa-solid fa-trash"></i></a>
+                </li>
+
+                <% } %>
+
+        </ul>
+    </div>
+</center>
